@@ -8,6 +8,8 @@ import { Provider } from 'react-redux'
 import { createStore, applyMiddleware } from 'redux'
 import thunk from 'redux-thunk'
 
+let store = createStore(rootreducer, applyMiddleware(thunk))
+
 ReactDOM.render(
   <React.StrictMode>
   <Router>
