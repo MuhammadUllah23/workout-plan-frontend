@@ -1,5 +1,6 @@
 import { useParams } from "react-router"
 import { Link } from "react-router-dom"
+import ExerciseForm from "./ExerciseForm"
 
 
 export default function WorkoutShow({workouts}) {
@@ -7,10 +8,12 @@ export default function WorkoutShow({workouts}) {
     let workout = workouts.filter(workout => workout.id == id)[0]
 
     function handleClick(e) {
-        if(e.target.innerText === "Edit Exercise"){
+        if(e.target.innerText === "Create Exercise"){
             // console.log("edit")
-            let exerciseId = document.getElementById(`exercise-${id}`)
-            {<EditExercise exercise={exerciseId}/>}
+            return (
+                <ExerciseForm />
+            )
+            
         } else if(e.target.innerText === "Delete Exercise"){
             console.log("delete")
         }
@@ -19,6 +22,7 @@ export default function WorkoutShow({workouts}) {
     <div class="show-workout">
         <h2>{workout.title}</h2>
         <p>Focus: {workout.focus}</p>
+        <Link to="/exercises/new" state={{workoutId: `${workout.id}`}}>Create New Exercise For This Workout</Link>
         <h3>Exercises:</h3>
         <ul>
                 {workout.exercises.map(n => 
@@ -28,12 +32,13 @@ export default function WorkoutShow({workouts}) {
                 <p>Target Area: {n.target}</p>
                 <p>Sets: {n.sets}</p>
                 <p>Reps: {n.reps}</p>
-                <button onClick={handleClick}>Edit Exercise</button><button onClick={handleClick}>Delete Exercise</button>
+                <button onClick={handleClick}>Delete Exercise</button>
                 </div>
                 <br></br>
                 </li>)}
             </ul>
-            <Link to="/exercises/new">Create Exercise for this Workout</Link>
+            
+            
     </div>
     
 )
