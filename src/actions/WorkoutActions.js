@@ -5,7 +5,7 @@ export function fetchWorkouts(){
     .then(notes => dispatch({type: "SET_WORKOUT", payload: notes}))
 }
 
-export function createWorkout(workout){
+export function createWorkout(workout, navigate){
     return dispatch => {
         fetch("http://localhost:3000/workouts", {
             method: "POST",
@@ -16,6 +16,9 @@ export function createWorkout(workout){
             body: JSON.stringify(workout)
         })
         .then(r => r.json())
-        .then(workout => dispatch({type: "ADD_WORKOUT", payload: workout}))
+        .then(workout => {
+            dispatch({type: "ADD_WORKOUT", payload: workout})
+            navigate("/workouts")
+        })
     }
 }
