@@ -18,7 +18,16 @@ export function createExercise(exercise, navigate){
         .then(r => r.json())
         .then(exercise => {
             dispatch({type: "ADD_EXERCISE", payload: exercise})
-            navigate(`/workout/${exercise.workout_id}`)
+            navigate("/workouts")
         })
     }
+}
+
+export function deleteExercise(exerciseId){
+    return (dispatch) => {
+        dispatch({ type: "DELETE_Exercise", payload: exerciseId });
+        fetch(`http://localhost:3000/exercises/${exerciseId}`, {
+          method: "DELETE",
+        });
+      };
 }

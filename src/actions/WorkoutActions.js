@@ -22,3 +22,4 @@ export function createWorkout(workout, navigate){
         })
     }
 }
+
