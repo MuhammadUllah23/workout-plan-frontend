@@ -3,6 +3,10 @@
  import { createWorkout } from "../actions/WorkoutActions";
 
  export default function WorkoutForm() {
+    state = {
+        title: '',
+        focus: ''
+      }
      
      const dispatch = useDispatch()
 
