@@ -11,6 +11,7 @@ function App() {
     <Link to="/workouts">Workouts</Link>
     <Routes>
       <Route path="/workouts" element={<WorkoutList/>}/>
+      <Route path="/workouts/new" element={<WorkoutForm/>}/>
     </Routes>
     </div>
   );
