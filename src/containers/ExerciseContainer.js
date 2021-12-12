@@ -4,24 +4,23 @@ import ExerciseForm from '../components/ExerciseForm';
 import ExerciseList from '../components/ExerciseList';
 import { useEffect } from "react";
 import { useSelector, useDispatch } from 'react-redux';
+import { fetchExercises } from '../actions/ExerciseActions';
 
 
 
-
-export default function WorkoutContainer() {
+export default function ExerciseContainer() {
     const dispatch = useDispatch()
-    const workouts = useSelector(state => state.exercises)
-
+    const exercises = useSelector(state => state.exercises)
 
     useEffect(() => {
-        dispatch()
+        dispatch(fetchExercises())
     }, [])
 
     return (
         <Routes>
-            <Route path="/exercises" element={<ExerciseList exercises={exercises}/>}/>
-            <Route path="/exercises/new" element={<WorkoutForm/>}/>
-            <Route path="/exercise/edit/:id" element={<EditExercise exercises={exercise}/>} />
+            <Route path="/exercises" element={<ExerciseList exercises={exercises} />}/>
+            <Route path="/exercises/new" element={<ExerciseForm />}/>
+            <Route path="/exercise/edit/:id" element={<EditExercise exercises={exercises}/>} />
         </Routes>
         
     )

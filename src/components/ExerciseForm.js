@@ -5,5 +5,8 @@ import { useNavigate } from "react-router";
 
 
 export default function ExerciseForm() {
+    return (
+        <p>hi</p>
+    )
 
 }
