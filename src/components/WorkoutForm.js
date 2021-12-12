@@ -1,8 +1,8 @@
  import { useState } from "react";
  import { useDispatch } from "react-redux";
  import { createWorkout } from "../actions/WorkoutActions";
- import WorkoutList from "./WorkoutList";
  import { useNavigate } from "react-router";
+ 
 
  export default function WorkoutForm() {
      const [workout, setWorkout] = useState({
@@ -40,7 +40,6 @@
             
             <input type="submit" />
          </form>  
-             
          
      )
  }
