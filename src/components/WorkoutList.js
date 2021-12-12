@@ -12,6 +12,9 @@ export default function WorkoutList() {
     return (
         <div>
             <h2>Workouts</h2>
+            <ul>
+                {workouts.map(n => <li key={n.id}>{n.title}</li>)}
+            </ul>
         </div>
     )
 }
