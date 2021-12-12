@@ -20,8 +20,8 @@ export default function WorkoutContainer() {
     return (
         <Routes>
             <Route path="/exercises" element={<ExerciseList exercises={exercises}/>}/>
-            <Route path="/workouts/new" element={<WorkoutForm/>}/>
-            <Route path="/workout/:id" element={<WorkoutShow exercises={exercise}/>} />
+            <Route path="/exercises/new" element={<WorkoutForm/>}/>
+            <Route path="/exercise/edit/:id" element={<EditExercise exercises={exercise}/>} />
         </Routes>
         
     )
