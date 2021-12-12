@@ -1,16 +1,14 @@
 import { Route, Routes } from 'react-router-dom'
-import { Link } from 'react-router-dom';
 import './App.css';
 import WorkoutList from './components/WorkoutList';
 import WorkoutForm from './components/WorkoutForm';
+import NavBar from './components/NavBar';
 
 function App() {
   return (
     <div className="App">
     <h1>Welcome</h1>
-    <Link to="/">Home</Link>
-    <Link to="/workouts">Workouts</Link>
-    <Link to="/workouts/new">Create Workout</Link>
+    <NavBar />
     <Routes>
       <Route path="/workouts" element={<WorkoutList/>}/>
       <Route path="/workouts/new" element={<WorkoutForm/>}/>
