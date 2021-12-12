@@ -10,9 +10,14 @@
      
      const dispatch = useDispatch()
 
+     handleOnChange = event => {
+        this.setState({
+          [event.target.name]: event.target.value
+        });
+      }
+
      function handleSubmit(e){
         e.preventDefault()
-        debugger
         dispatch(createWorkout({workout: workout}))
      }
 
@@ -21,16 +26,16 @@
          <h2>Create Workout</h2>
             <input
             type="text"
-            onChange={e => setWorkout(e.target.value)}
+            onChange={(event) => this.handleOnChange(event)}
             name="title"
-            value={workout.title}
+            value={this.state.title}
             placeholder="Title" />
 
             <input
             type="text"
-            onChange={e => setWorkout(e.target.value)}
+            onChange={(event) => this.handleOnChange(event)}
             name="focus"
-            value={workout.focus}
+            value={this.state.focus}
             placeholder="Focus" />
             
             <input type="submit" />
