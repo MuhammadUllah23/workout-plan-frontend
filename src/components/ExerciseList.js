@@ -1,8 +1,7 @@
 export default function ExerciseList({exercises}) {
- 
     return (
         <div>
-            <h2>Workouts</h2>
+            <h2>Exercises</h2>
             <ul>
                 {exercises.map(n => 
                 <li key={n.id}>
