@@ -6,18 +6,6 @@ import DeleteExercise from "./DeleteExercise"
 export default function WorkoutShow({workouts}) {
     const { id } = useParams()
     let workout = workouts.filter(workout => workout.id == id)[0]
-
-    function handleClick(e) {
-        if(e.target.innerText === "Create Exercise"){
-            // console.log("edit")
-            return (
-                <ExerciseForm />
-            )
-            
-        } else if(e.target.innerText === "Delete Exercise"){
-            console.log("delete")
-        }
-    }
     return (
     <div class="show-workout">
         <h2>{workout.title}</h2>

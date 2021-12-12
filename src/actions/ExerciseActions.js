@@ -25,7 +25,7 @@ export function createExercise(exercise, navigate){
 
 export function deleteExercise(exerciseId){
     return (dispatch) => {
-        dispatch({ type: "DELETE_Exercise", payload: exerciseId });
+        dispatch({ type: "DELETE_EXERCISE", payload: exerciseId });
         fetch(`http://localhost:3000/exercises/${exerciseId}`, {
           method: "DELETE",
         });
