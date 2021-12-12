@@ -3,14 +3,13 @@ import { useDispatch } from "react-redux"
 import { useNavigate } from "react-router";
 
 export default function DeleteExercise({exercise}) {
-    const navigate = useNavigate()
     const dispatch = useDispatch()
-
+    const navigate = useNavigate()
 
     function handleDelete(e){
-        dispatch(deleteExercise(e), navigate)
+        dispatch(deleteExercise(e, navigate))
     }
     return(
-        <button onClick={handleDelete(exercise)}>Delete</button>
+        <button onClick={() => handleDelete(exercise.id)}>Delete</button>
     )
 }

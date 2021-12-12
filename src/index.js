@@ -15,7 +15,7 @@ ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
       <Router>
-      <div class="wrapper">
+      <div className="wrapper">
       <App />
       </div>
         

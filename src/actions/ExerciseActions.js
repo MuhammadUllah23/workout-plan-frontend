@@ -23,11 +23,15 @@ export function createExercise(exercise, navigate){
     }
 }
 
-export function deleteExercise(exerciseId){
+export function deleteExercise(exerciseId, navigate){
     return (dispatch) => {
-        dispatch({ type: "DELETE_EXERCISE", payload: exerciseId });
         fetch(`http://localhost:3000/exercises/${exerciseId}`, {
           method: "DELETE",
-        });
-      };
+        })
+        .then( r => r.json())
+        .then(exerciseId => {
+            dispatch({ type: "DELETE_EXERCISE", payload: exerciseId });
+            navigate("/workouts")
+        })
+    };
 }
