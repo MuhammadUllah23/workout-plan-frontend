@@ -1,7 +1,7 @@
 import { useParams } from "react-router"
 import { Link } from "react-router-dom"
 import ExerciseForm from "./ExerciseForm"
-
+import DeleteExercise from "./DeleteExercise"
 
 export default function WorkoutShow({workouts}) {
     const { id } = useParams()
@@ -32,7 +32,7 @@ export default function WorkoutShow({workouts}) {
                 <p>Target Area: {n.target}</p>
                 <p>Sets: {n.sets}</p>
                 <p>Reps: {n.reps}</p>
-                <button onClick={handleClick}>Delete Exercise</button>
+                <DeleteExercise exercise={n}/>
                 </div>
                 <br></br>
                 </li>)}
