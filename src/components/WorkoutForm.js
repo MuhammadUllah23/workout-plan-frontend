@@ -1,24 +1,20 @@
- import React from "react";
+ import { useState } from "react";
  import { useDispatch } from "react-redux";
  import { createWorkout } from "../actions/WorkoutActions";
 
  export default function WorkoutForm() {
-    state = {
-        title: '',
-        focus: ''
-      }
-     
-     const dispatch = useDispatch()
+     const [workout, setWorkout] = useState({
+         title: "",
+         focus: ""
+     })
 
-     handleOnChange = event => {
-        this.setState({
-          [event.target.name]: event.target.value
-        });
-      }
+
+     const dispatch = useDispatch()
 
      function handleSubmit(e){
         e.preventDefault()
-        dispatch(createWorkout({workout: workout}))
+        
+        dispatch(createWorkout({workout}))
      }
 
      return (
@@ -26,16 +22,18 @@
          <h2>Create Workout</h2>
             <input
             type="text"
-            onChange={(event) => this.handleOnChange(event)}
+            onChange={e => setWorkout({...workout, title: e.target.value})}
             name="title"
-            value={this.state.title}
+            id="title"
+            value={workout.title}
             placeholder="Title" />
 
             <input
             type="text"
-            onChange={(event) => this.handleOnChange(event)}
+            onChange={e => setWorkout({...workout, focus: e.target.value})}
             name="focus"
-            value={this.state.focus}
+            id="focus"
+            value={workout.focus}
             placeholder="Focus" />
             
             <input type="submit" />
