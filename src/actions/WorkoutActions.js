@@ -7,7 +7,7 @@ export function fetchWorkouts(){
 
 export function createWorkout(workout){
     return dispatch => {
-        fetch("http://localhost:3000/workouts/new", {
+        fetch("http://localhost:3000/workouts", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

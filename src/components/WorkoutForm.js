@@ -1,13 +1,19 @@
- import { useState } from "react";
+ import React from "react";
  import { useDispatch } from "react-redux";
+ import { createWorkout } from "../actions/WorkoutActions";
 
  export default function WorkoutForm() {
-     const [workout, setWorkout] = useState("")
+     
      const dispatch = useDispatch()
 
-     
+     function handleSubmit(e){
+        e.preventDefault()
+        debugger
+        dispatch(createWorkout({workout: workout}))
+     }
+
      return (
-         <form>
+         <form onSubmit={handleSubmit}>
          <h2>Create Workout</h2>
             <input
             type="text"
