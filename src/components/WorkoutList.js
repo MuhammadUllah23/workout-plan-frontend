@@ -25,7 +25,7 @@
 //     )
 // }
 import {Link} from 'react-router-dom'
-
+ 
 const WorkoutList = ({ workouts }) => {
     return (
         <div>
