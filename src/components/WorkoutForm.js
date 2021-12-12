@@ -1,8 +1,11 @@
  import { useState } from "react";
+ import { useDispatch } from "react-redux";
 
  export default function WorkoutForm() {
      const [workout, setWorkout] = useState("")
-    console.log(workout.title)
+     const dispatch = useDispatch()
+
+     
      return (
          <form>
          <h2>Create Workout</h2>
