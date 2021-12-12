@@ -1,9 +1,17 @@
 import { useParams } from "react-router"
+import EditExercise from "./EditExercise"
 
 export default function WorkoutShow({workouts}) {
     const { id } = useParams()
     let workout = workouts.filter(workout => workout.id == id)[0]
-    debugger
+
+    function handleClick(e) {
+        if(e.target.innerText === "Edit Exercise"){
+            console.log("edit")
+        } else if(e.target.innerText === "Delete Exercise"){
+            console.log("delete")
+        }
+    }
     return (
     <div class="show-workout">
         <h2>{workout.title}</h2>
@@ -16,6 +24,7 @@ export default function WorkoutShow({workouts}) {
                 <p>Target Area: {n.target}</p>
                 <p>Sets: {n.sets}</p>
                 <p>Reps: {n.reps}</p>
+                <button onClick={handleClick}>Edit Exercise</button><button onClick={handleClick}>Delete Exercise</button>
                 <br></br>
                 </li>)}
             </ul>
