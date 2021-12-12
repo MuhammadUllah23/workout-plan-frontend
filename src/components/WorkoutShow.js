@@ -7,7 +7,9 @@ export default function WorkoutShow({workouts}) {
 
     function handleClick(e) {
         if(e.target.innerText === "Edit Exercise"){
-            console.log("edit")
+            // console.log("edit")
+            let exerciseId = document.getElementById(`exercise-${id}`)
+            {<EditExercise exercise={exerciseId}/>}
         } else if(e.target.innerText === "Delete Exercise"){
             console.log("delete")
         }
@@ -20,11 +22,13 @@ export default function WorkoutShow({workouts}) {
         <ul>
                 {workout.exercises.map(n => 
                 <li key={n.id}>
+                <div id={`exercise-${n.id}`}>
                 <h4>{n.name}</h4> 
                 <p>Target Area: {n.target}</p>
                 <p>Sets: {n.sets}</p>
                 <p>Reps: {n.reps}</p>
                 <button onClick={handleClick}>Edit Exercise</button><button onClick={handleClick}>Delete Exercise</button>
+                </div>
                 <br></br>
                 </li>)}
             </ul>
