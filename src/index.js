@@ -15,7 +15,10 @@ ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
       <Router>
-        <App />
+      <div class="wrapper">
+      <App />
+      </div>
+        
       </Router>
     </Provider>
   </React.StrictMode>,
