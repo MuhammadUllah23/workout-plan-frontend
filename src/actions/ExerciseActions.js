@@ -1,4 +1,4 @@
-export function fetchWorkouts(){
+export function fetchExercises(){
     return dispatch =>
     fetch("http://localhost:3000/exercises")
     .then(r=> r.json())
