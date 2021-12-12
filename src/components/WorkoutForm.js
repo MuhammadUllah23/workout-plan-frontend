@@ -2,6 +2,8 @@
 
  export default function WorkoutForm() {
      return (
-         
+         <form>
+             
+         </form>
      )
  }

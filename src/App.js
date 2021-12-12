@@ -2,6 +2,7 @@ import { Route, Routes } from 'react-router-dom'
 import { Link } from 'react-router-dom';
 import './App.css';
 import WorkoutList from './components/WorkoutList';
+import WorkoutForm from './components/WorkoutForm';
 
 function App() {
   return (
