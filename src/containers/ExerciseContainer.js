@@ -1,5 +1,4 @@
 import { Route, Routes } from 'react-router-dom'
-import EditExercise from '../components/EditExercise';
 import ExerciseForm from '../components/ExerciseForm';
 import ExerciseList from '../components/ExerciseList';
 import { useEffect } from "react";
@@ -20,7 +19,6 @@ export default function ExerciseContainer() {
         <Routes>
             <Route path="/exercises" element={<ExerciseList exercises={exercises} />}/>
             <Route path="/exercises/new" element={<ExerciseForm />}/>
-            <Route path="/exercise/edit/:id" element={<EditExercise exercises={exercises}/>} />
         </Routes>
         
     )

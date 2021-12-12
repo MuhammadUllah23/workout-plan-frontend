@@ -1,6 +1,6 @@
 import { useParams } from "react-router"
 import { Link } from "react-router-dom"
-import EditExercise from "./EditExercise"
+
 
 export default function WorkoutShow({workouts}) {
     const { id } = useParams()
