@@ -1,4 +1,5 @@
 import { useParams } from "react-router"
+import { Link } from "react-router-dom"
 import EditExercise from "./EditExercise"
 
 export default function WorkoutShow({workouts}) {
@@ -32,6 +33,7 @@ export default function WorkoutShow({workouts}) {
                 <br></br>
                 </li>)}
             </ul>
+            <Link to="/exercises/new">Create Exercise for this Workout</Link>
     </div>
     
 )
