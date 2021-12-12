@@ -10,6 +10,7 @@ function App() {
     <h1>Welcome</h1>
     <Link to="/">Home</Link>
     <Link to="/workouts">Workouts</Link>
+    <Link to="/workouts/new">Create Workout</Link>
     <Routes>
       <Route path="/workouts" element={<WorkoutList/>}/>
       <Route path="/workouts/new" element={<WorkoutForm/>}/>
