@@ -23,7 +23,7 @@ export function createExercise(exercise, navigate){
     }
 }
 
-export function deleteExercise(exerciseId, navigate){
+export function deleteExercise(exerciseId){
     return (dispatch) => {
         fetch(`http://localhost:3000/exercises/${exerciseId}`, {
           method: "DELETE",
@@ -31,7 +31,7 @@ export function deleteExercise(exerciseId, navigate){
         .then( r => r.json())
         .then(exercise => {
             dispatch({ type: "DELETE_EXERCISE", payload: exercise.id });
-            navigate(`/workout/${exercise.workout.id}`)
+            
         })
     };
 }
