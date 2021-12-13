@@ -28,7 +28,7 @@ export default function ExerciseForm({}) {
 
     return (
         <form onSubmit={handleSubmit}>
-        <h2>Create Workout</h2>
+        <h2>Create Exercise</h2>
            <input
            type="text"
            onChange={e => setExercise({...exercise, name: e.target.value})}
