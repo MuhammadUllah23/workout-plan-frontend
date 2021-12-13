@@ -4,7 +4,7 @@ import ExerciseList from '../components/ExerciseList';
 import { useEffect } from "react";
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchExercises } from '../actions/ExerciseActions';
-
+import WorkoutContainer from './WorkoutContainer';
 
 
 export default function ExerciseContainer() {
@@ -16,10 +16,14 @@ export default function ExerciseContainer() {
     }, [])
 
     return (
-        <Routes>
-            <Route path="/exercises" element={<ExerciseList exercises={exercises} />}/>
-            <Route path="/exercises/new" element={<ExerciseForm />}/>
-        </Routes>
+        <div>
+            <WorkoutContainer exercises={exercises}/>
+            <Routes>
+                <Route path="/exercises" element={<ExerciseList exercises={exercises} />}/>
+                <Route path="/exercises/new" element={<ExerciseForm />}/>
+            </Routes>
+        </div>
+       
         
     )
     

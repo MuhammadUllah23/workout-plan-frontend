@@ -10,7 +10,7 @@ function App() {
     <h1>Welcome</h1>
     <NavBar />
     <Home />
-    <WorkoutContainer />
+    {/* <WorkoutContainer /> */}
     <ExerciseContainer />
     </div>
   );
