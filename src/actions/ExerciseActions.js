@@ -18,7 +18,7 @@ export function createExercise(exercise, navigate){
         .then(r => r.json())
         .then(exercise => {
             dispatch({type: "ADD_EXERCISE", payload: exercise})
-            navigate("/workouts")
+            navigate(`/workout/${exercise.workout.id}`)
         })
     }
 }
@@ -29,9 +29,9 @@ export function deleteExercise(exerciseId, navigate){
           method: "DELETE",
         })
         .then( r => r.json())
-        .then(exerciseId => {
-            dispatch({ type: "DELETE_EXERCISE", payload: exerciseId });
-            navigate("/workouts")
+        .then(exercise => {
+            dispatch({ type: "DELETE_EXERCISE", payload: exercise.id });
+            navigate(`/workout/${exercise.workout.id}`)
         })
     };
 }
