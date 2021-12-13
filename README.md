@@ -1,3 +1,15 @@
+Backend Link: https://github.com/MuhammadUllah23/workout-plan-api
+
+# About
+
+This project allows users to create workout plans that they want to use to focus on specific muscle groups. The user gets to create exercises that show the name, what what muscle it target, and the amount of sets and reps. This Workou Plan project uses the React library, Redux Store, Hooks, and uses a Rails API as a backend with the PostgreSQL database.
+
+# Author
+
+Muhammad Ullah 
+Blog: https://muhammadhullah23.medium.com/workout-plan-react-project-e355892c84b7
+LinkedIn: https://www.linkedin.com/in/muhammad-h-ullah/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
