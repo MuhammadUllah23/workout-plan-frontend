@@ -1,4 +1,8 @@
-export default function ExerciseList({exercises}) {
+import { useSelector } from "react-redux"
+
+export default function ExerciseList({}) {
+
+const exercises = useSelector(state => state.exercises)
     return (
         <div>
             <h2>Exercises</h2>

@@ -19,7 +19,7 @@ export default function ExerciseContainer() {
         <div>
             {/* <WorkoutContainer exercises={exercises}/> */}
             <Routes>
-                <Route path="/exercises" element={<ExerciseList exercises={exercises} />}/>
+                <Route path="/exercises" element={<ExerciseList  />}/>
                 <Route path="/exercises/new" element={<ExerciseForm />}/>
             </Routes>
         </div>
