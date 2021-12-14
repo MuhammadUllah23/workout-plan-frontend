@@ -1,11 +1,13 @@
 import { useParams } from "react-router"
 import { Link } from "react-router-dom"
-import ExerciseForm from "./ExerciseForm"
 import DeleteExercise from "./DeleteExercise"
+import { useSelector } from "react-redux"
 
-export default function WorkoutShow({workouts, exercises}) {
+export default function WorkoutShow() {
     const { id } = useParams()
+    const workouts = useSelector(state => state.workouts)
     let workout = workouts.filter(workout => workout.id == id)[0]
+    const exercises = useSelector(state => state.exercises)
     let exerciseList = exercises.filter(exercise => exercise.workout.id == id)
     
     return (

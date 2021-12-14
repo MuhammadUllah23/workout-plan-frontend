@@ -1,4 +1,3 @@
-
 export default function exerciseReducer(state = [], action){
     switch (action.type) {
         case "SET_EXERCISES":

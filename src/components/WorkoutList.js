@@ -1,7 +1,7 @@
 import {Link} from 'react-router-dom'
 
 export default function WorkoutList({workouts}) {
-
+debugger
     return (
         <div>
             <h2>Workouts</h2>

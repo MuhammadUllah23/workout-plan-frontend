@@ -8,7 +8,7 @@ import { fetchWorkouts } from '../actions/WorkoutActions';
 
 
 
-export default function WorkoutContainer({exercises}) {
+export default function WorkoutContainer({}) {
     const dispatch = useDispatch()
     const workouts = useSelector(state => state.workouts)
 
@@ -21,7 +21,7 @@ export default function WorkoutContainer({exercises}) {
         <Routes>
             <Route path="/workouts" element={<WorkoutList workouts={workouts}/>}/>
             <Route path="/workouts/new" element={<WorkoutForm/>}/>
-            <Route path="/workout/:id" element={<WorkoutShow workouts={workouts} exercises={exercises}/>} />
+            <Route path="/workout/:id" element={<WorkoutShow />} />
         </Routes>
         
     )
