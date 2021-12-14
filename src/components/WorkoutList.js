@@ -1,7 +1,9 @@
 import {Link} from 'react-router-dom'
+import { useSelector } from 'react-redux'
 
-export default function WorkoutList({workouts}) {
-debugger
+export default function WorkoutList() {
+const workouts = useSelector(state => state.workouts)
+
     return (
         <div>
             <h2>Workouts</h2>
