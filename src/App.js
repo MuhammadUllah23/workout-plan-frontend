@@ -11,8 +11,7 @@ import ExerciseList from './components/ExerciseList';
 import WorkoutForm from './components/WorkoutForm';
 import WorkoutList from './components/WorkoutList'
 import WorkoutShow from './components/WorkoutShow'
-// import ExerciseContainer from './containers/ExerciseContainer';
-// import WorkoutContainer from './containers/WorkoutContainer';
+import Home from './components/Home';
 
 function App() {
 
@@ -34,9 +33,8 @@ function App() {
             <Route path="/workout/:id" element={<WorkoutShow />} />
             <Route path="/exercises" element={<ExerciseList  />}/>
             <Route path="/exercises/new" element={<ExerciseForm />}/>
+            <Route path="/" element={<Home />} />
       </Routes>
-    {/* <WorkoutContainer />
-    <ExerciseContainer /> */}
     </div>
   );
 }

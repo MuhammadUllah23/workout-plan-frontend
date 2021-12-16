@@ -15,18 +15,18 @@ export default function WorkoutShow() {
     return (
     <div class="show-workout">
         <h2>{workout.title}</h2> 
-        <p>Focus: {workout.focus}</p> <DeleteWorkout workout={workout} /><br></br>
+        <p>Focus: {workout.focus}</p> <DeleteWorkout workoutId={workout.id} /><br></br>
         <Link to="/exercises/new" state={{workoutId: `${workout.id}`}}>Create New Exercise For This Workout</Link>
         <h3>Exercises:</h3>
         <ul>
-                {exerciseList.map(n => 
-                <li key={n.id}>
-                <div id={`exercise-${n.id}`}>
-                <h4>{n.name}</h4> 
-                <p>Target Area: {n.target}</p>
-                <p>Sets: {n.sets}</p>
-                <p>Reps: {n.reps}</p>
-                <DeleteExercise exercise={n} />
+                {exerciseList.map(e => 
+                <li key={e.id}>
+                <div id={`exercise-${e.id}`}>
+                <h4>{e.name}</h4> 
+                <p>Target Area: {e.target}</p>
+                <p>Sets: {e.sets}</p>
+                <p>Reps: {e.reps}</p>
+                <DeleteExercise exerciseId={e.id} />
                 </div>
                 <br></br>
                 </li>)}

@@ -5,7 +5,7 @@ import { useNavigate } from "react-router";
 import { createExercise } from "../actions/ExerciseActions";
 
 
-export default function ExerciseForm({}) {
+export default function ExerciseForm() {
     const location = useLocation()
     const { workoutId } = location.state
     

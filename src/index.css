@@ -22,3 +22,10 @@ code {
   padding: 2.25%; /* 18px / 800px */
   width: 85%;
 }
+
+.list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+

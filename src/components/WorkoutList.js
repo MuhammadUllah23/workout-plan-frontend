@@ -7,7 +7,7 @@ const workouts = useSelector(state => state.workouts)
     return (
         <div>
             <h2>Workouts</h2>
-            <ul>
+            <ul className='list'>
                 {workouts.map(n => 
                 <li key={n.id}>
                 <h4>{n.title}</h4> 
