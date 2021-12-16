@@ -1,8 +1,10 @@
+import { SET_EXERCISES, ADD_EXERCISE, DELETE_EXERCISE } from "./constants"
+
 export function fetchExercises(){
     return dispatch =>
     fetch("http://localhost:3000/exercises")
     .then(r=> r.json())
-    .then(exercises => dispatch({type: "SET_EXERCISES", payload: exercises}))
+    .then(exercises => dispatch({type: SET_EXERCISES, payload: exercises}))
 }
 
 export function createExercise(exercise, navigate){
@@ -17,7 +19,7 @@ export function createExercise(exercise, navigate){
         })
         .then(r => r.json())
         .then(exercise => {
-            dispatch({type: "ADD_EXERCISE", payload: exercise})
+            dispatch({type: ADD_EXERCISE, payload: exercise})
             navigate(`/workout/${exercise.workout.id}`)
         })
     }
@@ -30,7 +32,7 @@ export function deleteExercise(exerciseId){
         })
         .then( r => r.json())
         .then(exercise => {
-            dispatch({ type: "DELETE_EXERCISE", payload: exercise.id });
+            dispatch({ type: DELETE_EXERCISE, payload: exercise.id });
             
         })
     };

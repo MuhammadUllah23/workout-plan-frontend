@@ -1,8 +1,10 @@
+import { SET_WORKOUT, ADD_WORKOUT, DELETE_WORKOUT } from "./constants"
+
 export function fetchWorkouts(){
     return dispatch =>
     fetch("http://localhost:3000/workouts")
     .then(r=> r.json())
-    .then(workouts => dispatch({type: "SET_WORKOUT", payload: workouts}))
+    .then(workouts => dispatch({type: SET_WORKOUT, payload: workouts}))
 }
 
 export function createWorkout(workout, navigate){
@@ -17,7 +19,7 @@ export function createWorkout(workout, navigate){
         })
         .then(r => r.json())
         .then(workout => {
-            dispatch({type: "ADD_WORKOUT", payload: workout})
+            dispatch({type: ADD_WORKOUT, payload: workout})
             navigate(`/workouts`)
         })
     }
@@ -31,7 +33,7 @@ export function deleteWorkout(workoutId, navigate){
         .then( r => r.json())
         .then(workout => {
             navigate("/workouts")
-            dispatch({ type: "DELETE_WORKOUT", payload: workout.id });
+            dispatch({ type: DELETE_WORKOUT, payload: workout.id });
             
         })
     };

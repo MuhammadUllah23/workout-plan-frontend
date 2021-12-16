@@ -1,0 +1,7 @@
+export const SET_WORKOUT = "SET_WORKOUT"
+export const ADD_WORKOUT = "ADD_WORKOUT"
+export const DELETE_WORKOUT = "DELETE_WORKOUT"
+
+export const SET_EXERCISES = "SET_EXERCISES"
+export const ADD_EXERCISE = "ADD_EXERCISE"
+export const DELETE_EXERCISE = "DELETE_EXERCISE"

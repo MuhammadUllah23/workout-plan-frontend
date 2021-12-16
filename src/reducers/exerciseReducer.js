@@ -1,12 +1,14 @@
+import { SET_EXERCISES, ADD_EXERCISE, DELETE_EXERCISE } from "../actions/constants";
+
 export default function exerciseReducer(state = [], action){
     switch (action.type) {
-        case "SET_EXERCISES":
+        case SET_EXERCISES:
             return action.payload
 
-        case "ADD_EXERCISE":
+        case ADD_EXERCISE:
             return [...state, action.payload];
                 
-        case "DELETE_EXERCISE":
+        case DELETE_EXERCISE:
             return state.filter(exercise => exercise.id !== action.payload)
 
         default: 
