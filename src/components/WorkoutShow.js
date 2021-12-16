@@ -11,7 +11,7 @@ export default function WorkoutShow() {
     let workout = workouts.filter(workout => workout.id == id)[0]
     const exercises = useSelector(state => state.exercises)
     let exerciseList = exercises.filter(exercise => exercise.workout.id == id)
-    
+
     return (
     <div class="show-workout">
         <h2>{workout.title}</h2> 
