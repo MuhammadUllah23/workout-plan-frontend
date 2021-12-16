@@ -18,7 +18,7 @@ export function createWorkout(workout, navigate){
         .then(r => r.json())
         .then(workout => {
             dispatch({type: "ADD_WORKOUT", payload: workout})
-            navigate("/workouts")
+            navigate(`/workouts`)
         })
     }
 }

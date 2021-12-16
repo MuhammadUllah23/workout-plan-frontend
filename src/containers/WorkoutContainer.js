@@ -10,8 +10,6 @@ import { fetchWorkouts } from '../actions/WorkoutActions';
 
 export default function WorkoutContainer({}) {
     const dispatch = useDispatch()
-    const workouts = useSelector(state => state.workouts)
-
 
     useEffect(() => {
         dispatch(fetchWorkouts())
