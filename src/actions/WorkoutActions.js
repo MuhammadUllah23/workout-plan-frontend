@@ -23,3 +23,17 @@ export function createWorkout(workout, navigate){
     }
 }
 
+export function deleteWorkout(workoutId, navigate){
+    return (dispatch) => {
+        fetch(`http://localhost:3000/workouts/${workoutId}`, {
+          method: "DELETE",
+        })
+        .then( r => r.json())
+        .then(workout => {
+            navigate("/workouts")
+            dispatch({ type: "DELETE_WORKOUT", payload: workout.id });
+            
+        })
+    };
+}
+

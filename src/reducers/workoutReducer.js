@@ -6,6 +6,10 @@ export default function workoutReducer(state = [], action){
         case "ADD_WORKOUT":
             return [...state, action.payload];
 
+        case "DELETE_WORKOUT":
+            return state.filter(workout => workout.id !== action.payload)
+
+
         default: 
         return state
     }

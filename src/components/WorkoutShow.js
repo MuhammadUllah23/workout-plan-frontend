@@ -2,6 +2,8 @@ import { useParams } from "react-router"
 import { Link } from "react-router-dom"
 import DeleteExercise from "./DeleteExercise"
 import { useSelector } from "react-redux"
+import DeleteWorkout from "./DeleteWorkout"
+
 
 export default function WorkoutShow() {
     const { id } = useParams()
@@ -12,8 +14,8 @@ export default function WorkoutShow() {
     
     return (
     <div class="show-workout">
-        <h2>{workout.title}</h2>
-        <p>Focus: {workout.focus}</p>
+        <h2>{workout.title}</h2> 
+        <p>Focus: {workout.focus}</p> <DeleteWorkout workout={workout} /><br></br>
         <Link to="/exercises/new" state={{workoutId: `${workout.id}`}}>Create New Exercise For This Workout</Link>
         <h3>Exercises:</h3>
         <ul>
@@ -24,7 +26,7 @@ export default function WorkoutShow() {
                 <p>Target Area: {n.target}</p>
                 <p>Sets: {n.sets}</p>
                 <p>Reps: {n.reps}</p>
-                <DeleteExercise exercise={n}/>
+                <DeleteExercise exercise={n} />
                 </div>
                 <br></br>
                 </li>)}

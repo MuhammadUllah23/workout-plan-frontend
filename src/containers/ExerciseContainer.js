@@ -9,7 +9,7 @@ import { fetchExercises } from '../actions/ExerciseActions';
 
 export default function ExerciseContainer() {
     const dispatch = useDispatch()
-    const exercises = useSelector(state => state.exercises)
+   
 
     useEffect(() => {
         dispatch(fetchExercises())
