@@ -3,6 +3,7 @@ import { SET_WORKOUT, ADD_WORKOUT, DELETE_WORKOUT } from "../actions/constants";
 export default function workoutReducer(state = [], action){
     switch (action.type) {
         case SET_WORKOUT:
+            console.log("f")
             return action.payload
 
         case ADD_WORKOUT:

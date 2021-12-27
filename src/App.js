@@ -18,8 +18,10 @@ function App() {
   const dispatch = useDispatch()
 
   useEffect(() => {
+    console.log("a")
       dispatch(fetchWorkouts())
       dispatch(fetchExercises())
+      console.log("b")
   }, [])
 
 
@@ -32,7 +34,7 @@ function App() {
             <Route path="/workouts/new" element={<WorkoutForm/>}/>
             <Route path="/workout/:id" element={<WorkoutShow />} />
             <Route path="/exercises" element={<ExerciseList  />}/>
-            <Route path="/exercises/new" element={<ExerciseForm />}/>
+            <Route path="/workout/:id/exercises/new" element={<ExerciseForm />}/>
             <Route path="/" element={<Home />} />
       </Routes>
     </div>

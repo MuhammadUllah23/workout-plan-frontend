@@ -1,20 +1,22 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { useLocation } from 'react-router-dom'
+
 import { useNavigate } from "react-router";
 import { createExercise } from "../actions/ExerciseActions";
+import { useParams } from "react-router"
 
 
 export default function ExerciseForm() {
-    const location = useLocation()
-    const { workoutId } = location.state
+
+    const { id } = useParams()
+  
     
     const [exercise, setExercise] = useState({
         name: "",
         target: "",
         sets: "",
         reps: "",
-        workout_id: workoutId
+        workout_id: id
     })
 
     const navigate = useNavigate()

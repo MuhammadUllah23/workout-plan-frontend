@@ -1,4 +1,4 @@
-import { SET_EXERCISES, ADD_EXERCISE, DELETE_EXERCISE } from "./constants"
+import { SET_EXERCISES, ADD_EXERCISE, DELETE_EXERCISE, UPDATE_EXERCISE } from "./constants"
 
 export function fetchExercises(){
     return dispatch =>
@@ -37,3 +37,4 @@ export function deleteExercise(exerciseId){
         })
     };
 }
+

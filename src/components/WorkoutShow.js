@@ -4,7 +4,6 @@ import DeleteExercise from "./DeleteExercise"
 import { useSelector } from "react-redux"
 import DeleteWorkout from "./DeleteWorkout"
 
-
 export default function WorkoutShow() {
     const { id } = useParams()
     const workouts = useSelector(state => state.workouts)
@@ -16,7 +15,7 @@ export default function WorkoutShow() {
     <div class="show-workout">
         <h2>{workout.title}</h2> 
         <p>Focus: {workout.focus}</p> <DeleteWorkout workoutId={workout.id} /><br></br>
-        <Link to="/exercises/new" state={{workoutId: `${workout.id}`}}>Create New Exercise For This Workout</Link>
+        <Link to={`exercises/new`}>Create New Exercise For This Workout</Link>
         <h3>Exercises:</h3>
         <ul>
                 {exerciseList.map(e => 
