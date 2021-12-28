@@ -2,6 +2,7 @@ import {Link} from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import './workout.css'
 
+
 export default function WorkoutList() {
 const workouts = useSelector(state => state.workouts)
 

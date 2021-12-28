@@ -3,6 +3,7 @@ import { Link } from "react-router-dom"
 import DeleteExercise from "../exercise/DeleteExercise"
 import { useSelector } from "react-redux"
 import DeleteWorkout from "./DeleteWorkout"
+// import UpdateExercise from "../exercise/UpdateExercise"
 
 export default function WorkoutShow() {
     const { id } = useParams()
@@ -21,12 +22,13 @@ export default function WorkoutShow() {
                 {exerciseList.map(e => 
                 <li key={e.id}>
                 <div id={`exercise-${e.id}`}>
-                <h4>{e.name}</h4> 
-                <p>Target Area: {e.target}</p>
-                <p>Sets: {e.sets}</p>
-                <p>Reps: {e.reps}</p>
-                <DeleteExercise exerciseId={e.id} />
+                <h4 class="exercise-name">{e.name}</h4> 
+                <p class="exercise-target">Target Area: {e.target}</p>
+                <p class="exercise-sets">Sets: {e.sets}</p>
+                <p class="exercise-reps">Reps: {e.reps}</p>
                 </div>
+                <DeleteExercise exerciseId={e.id} />
+            
                 <br></br>
                 </li>)}
             </ul>
