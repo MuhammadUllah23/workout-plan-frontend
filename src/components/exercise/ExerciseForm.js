@@ -29,7 +29,7 @@ export default function ExerciseForm() {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form className="form" onSubmit={handleSubmit}>
         <h2>Create Exercise</h2>
            <input
            type="text"
@@ -38,7 +38,7 @@ export default function ExerciseForm() {
            id="name"
            value={exercise.name}
            placeholder="Exercise Name" />
-
+            <br />
            <input
            type="text"
            onChange={e => setExercise({...exercise, target: e.target.value})}
@@ -46,7 +46,7 @@ export default function ExerciseForm() {
            id="target"
            value={exercise.target}
            placeholder="Target Areas" />
-
+            <br />
            <input
            type="number"
            min='1'
@@ -55,7 +55,7 @@ export default function ExerciseForm() {
            id="sets"
            value={exercise.sets}
            placeholder="Sets" />
-
+            <br />
            <input
            type="number"
            min='1'
@@ -64,7 +64,7 @@ export default function ExerciseForm() {
            id="reps"
            value={exercise.reps}
            placeholder="Reps" />
-           
+            <br />        
            <input className="submitInput" type="submit" />
         </form>  
         

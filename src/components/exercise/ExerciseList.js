@@ -1,12 +1,15 @@
 import { useSelector } from "react-redux"
 
-
 export default function ExerciseList() {
+
     
 const allExercises = useSelector(state => state.exercises)
 
+
     return (
+        
         <div>
+
             <h2>Exercises</h2>
             <ul className="exerciseList">
                 {allExercises.map(n => 

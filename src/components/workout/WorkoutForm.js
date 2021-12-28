@@ -20,7 +20,7 @@
      }
 
      return (
-         <form onSubmit={handleSubmit}>
+         <form className="form" onSubmit={handleSubmit}>
          <h2>Create Workout</h2>
             <input
             type="text"
@@ -29,7 +29,7 @@
             id="title"
             value={workout.title}
             placeholder="Title" />
-
+            <br />
             <input
             type="text"
             onChange={e => setWorkout({...workout, focus: e.target.value})}
@@ -37,7 +37,7 @@
             id="focus"
             value={workout.focus}
             placeholder="Focus" />
-            
+            <br />
             <input className="submitInput" type="submit" />
          </form>  
          

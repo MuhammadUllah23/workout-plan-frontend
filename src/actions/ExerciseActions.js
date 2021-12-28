@@ -19,8 +19,13 @@ export function createExercise(exercise, navigate){
         })
         .then(r => r.json())
         .then(exercise => {
-            dispatch({type: ADD_EXERCISE, payload: exercise})
-            navigate(`/workout/${exercise.workout.id}`)
+            if (exercise.message) {
+                alert(exercise.message)
+            } else{
+                dispatch({type: ADD_EXERCISE, payload: exercise})
+                navigate(`/workout/${exercise.workout.id}`)
+            }
+            
         })
     }
 }
