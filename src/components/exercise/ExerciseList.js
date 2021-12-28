@@ -8,7 +8,7 @@ const allExercises = useSelector(state => state.exercises)
     return (
         <div>
             <h2>Exercises</h2>
-            <ul className="list">
+            <ul className="exerciseList">
                 {allExercises.map(n => 
                 <li key={n.id}>
                 <h4>{n.name}</h4> 

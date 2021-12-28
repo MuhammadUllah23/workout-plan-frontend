@@ -12,12 +12,12 @@ export default function WorkoutShow() {
     let exerciseList = exercises.filter(exercise => exercise.workout.id == id)
 
     return (
-    <div class="show-workout">
+    <div class="showWorkout">
         <h2>{workout.title}</h2> 
         <p>Focus: {workout.focus}</p> <DeleteWorkout workoutId={workout.id} /><br></br>
-        <Link to={`exercises/new`}>Create New Exercise For This Workout</Link>
+        <Link className="link" id="createExerciseLink" to={`exercises/new`}>Create New Exercise For This Workout</Link>
         <h3>Exercises:</h3>
-        <ul>
+        <ul className="exerciseList">
                 {exerciseList.map(e => 
                 <li key={e.id}>
                 <div id={`exercise-${e.id}`}>

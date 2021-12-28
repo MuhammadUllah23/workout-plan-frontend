@@ -5,10 +5,18 @@
     text-align: center;
     color: antiquewhite;
   }
+
+  .navbar {
+      
+      background-color: black;
+      border-radius: 50px;
+      text-align: center;
+  }
   
   
   .navLinks {
     list-style: none; 
+    
   }
   
   .navLinks li {
@@ -24,7 +32,9 @@
   
   .navLinks li a:hover {
     color: #a9002a
+    
   }
+
   
   .deleteButton {
       text-decoration: none;
@@ -46,3 +56,30 @@
       border: none;
       border-radius: 50px;   
   }
+
+  h2 {
+    text-align: center;
+    color: #CD7F32;
+}
+
+#logo {
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+.link {
+    text-decoration: none;
+}
+
+.exerciseList {
+    color: antiquewhite;
+    list-style: none;
+    text-align: center;
+    
+}
+
+.exerciseList li {
+    border-bottom:5px solid black;
+}

@@ -1,14 +1,30 @@
-.list {
+#workoutList {
     list-style-type: none;
-    
+    display: grid;
+    gap: 10px;
+   grid-template-columns: 180px 180px 180px;
+   justify-content: space-evenly;
+  justify-items: center; 
+  }
+
+  #workoutList {
+      text-align: center;
   }
 
   .workout {
-      background-color: navy;
-      ;
-      
+    background-color:  #f8e0b3;
+    padding: 0px 20px;
   }
 
-  .workout h4 {
-      
+  #createExerciseLink {
+                     
+      color: #f8e0b3;
   }
+
+ .showWorkout {
+     text-align: center;
+ }
+
+ .showWorkout p {
+     color: antiquewhite;
+ }
