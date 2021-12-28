@@ -1,6 +1,6 @@
  import { useState } from "react";
  import { useDispatch } from "react-redux";
- import { createWorkout } from "../actions/WorkoutActions";
+ import { createWorkout } from "../../actions/WorkoutActions";
  import { useNavigate } from "react-router";
  
 
@@ -38,7 +38,7 @@
             value={workout.focus}
             placeholder="Focus" />
             
-            <input type="submit" />
+            <input className="submitInput" type="submit" />
          </form>  
          
      )

@@ -2,7 +2,6 @@ import { SET_WORKOUT, ADD_WORKOUT, DELETE_WORKOUT } from "./constants"
 
 export function fetchWorkouts(){
     return dispatch =>{
-        console.log("c")
     fetch("http://localhost:3000/workouts")
     .then(r=> r.json())
     .then(workouts => {
@@ -10,7 +9,6 @@ export function fetchWorkouts(){
         dispatch({type: SET_WORKOUT, payload: workouts}
             )})
 }
-console.log("d")
 }
 
 export function createWorkout(workout, navigate){
@@ -28,7 +26,7 @@ export function createWorkout(workout, navigate){
         .then(workout => {
            
             dispatch({type: ADD_WORKOUT, payload: workout})
-            navigate(`/workouts`)
+            navigate(`/workout/${workout.id}`)
         })
     }
     

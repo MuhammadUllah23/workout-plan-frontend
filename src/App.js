@@ -6,11 +6,11 @@ import { useDispatch } from 'react-redux';
 import { fetchWorkouts } from './actions/WorkoutActions';
 import { fetchExercises } from './actions/ExerciseActions';
 
-import ExerciseForm from './components/ExerciseForm';
-import ExerciseList from './components/ExerciseList';
-import WorkoutForm from './components/WorkoutForm';
-import WorkoutList from './components/WorkoutList'
-import WorkoutShow from './components/WorkoutShow'
+import ExerciseForm from './components/exercise/ExerciseForm';
+import ExerciseList from './components/exercise/ExerciseList';
+import WorkoutForm from './components/workout/WorkoutForm';
+import WorkoutList from './components/workout/WorkoutList'
+import WorkoutShow from './components/workout/WorkoutShow'
 import Home from './components/Home';
 
 function App() {
@@ -18,16 +18,14 @@ function App() {
   const dispatch = useDispatch()
 
   useEffect(() => {
-    console.log("a")
       dispatch(fetchWorkouts())
       dispatch(fetchExercises())
-      console.log("b")
   }, [])
 
 
   return (
     <div className="App">
-    <h1>Workout Plan</h1>
+    <h1 id='bigTitle'>Workout Plan</h1>
     <NavBar />
     <Routes>
             <Route path="/workouts" element={<WorkoutList />}/>

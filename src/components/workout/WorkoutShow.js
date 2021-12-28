@@ -1,6 +1,6 @@
 import { useParams } from "react-router"
 import { Link } from "react-router-dom"
-import DeleteExercise from "./DeleteExercise"
+import DeleteExercise from "../exercise/DeleteExercise"
 import { useSelector } from "react-redux"
 import DeleteWorkout from "./DeleteWorkout"
 

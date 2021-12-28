@@ -1,4 +1,4 @@
-import { deleteExercise } from "../actions/ExerciseActions"
+import { deleteExercise } from "../../actions/ExerciseActions"
 import { useDispatch } from "react-redux"
 
 
@@ -9,6 +9,6 @@ export default function DeleteExercise({exerciseId}) {
         dispatch(deleteExercise(e))
     }
     return(
-        <button onClick={() => handleDelete(exerciseId)}>Delete</button>
+        <button className="deleteButton" onClick={() => handleDelete(exerciseId)}>Delete</button>
     )
 }

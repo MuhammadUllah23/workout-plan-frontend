@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 
 import { useNavigate } from "react-router";
-import { createExercise } from "../actions/ExerciseActions";
+import { createExercise } from "../../actions/ExerciseActions";
 import { useParams } from "react-router"
 
 
@@ -65,7 +65,7 @@ export default function ExerciseForm() {
            value={exercise.reps}
            placeholder="Reps" />
            
-           <input type="submit" />
+           <input className="submitInput" type="submit" />
         </form>  
         
     )

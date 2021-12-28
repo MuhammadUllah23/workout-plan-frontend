@@ -1,0 +1,48 @@
+
+  
+  #bigTitle {
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    color: antiquewhite;
+  }
+  
+  
+  .navLinks {
+    list-style: none; 
+  }
+  
+  .navLinks li {
+    display: inline-block;
+    padding: 0px 5px;
+    transition: all .03s ease 0s;
+  }
+  
+  .navLinks li a {
+   text-decoration: none;
+    color: #0088a9;
+  }
+  
+  .navLinks li a:hover {
+    color: #a9002a
+  }
+  
+  .deleteButton {
+      text-decoration: none;
+
+	font-family: sans-serif;
+	font-weight: 100;
+      background-color: rgb(109, 6, 6);
+      background-image: linear-gradient(rgb(109, 6, 6),red);
+      border: none;
+      border-radius: 50px;
+  }
+
+  .submitInput {
+    text-decoration: none;
+
+	font-family: sans-serif;
+	font-weight: 100;
+      background-color: gold;
+      border: none;
+      border-radius: 50px;   
+  }
