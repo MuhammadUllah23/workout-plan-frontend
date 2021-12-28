@@ -2,7 +2,6 @@ import {Link} from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import './workout.css'
 
-
 export default function WorkoutList() {
 const workouts = useSelector(state => state.workouts)
 
@@ -16,6 +15,7 @@ const workouts = useSelector(state => state.workouts)
                     <h4>{n.title}</h4> 
                     <p>Focus: {n.focus}</p>
                     <p><Link className='link' to={`/workout/${n.id}`}>View Workout</Link></p>
+                    
                 <br></br>
                 </li>
                 )}
