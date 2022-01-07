@@ -3,14 +3,19 @@ import { useSelector } from 'react-redux'
 import './workout.css'
 
 export default function WorkoutList() {
-const workouts = useSelector(state => state.workouts)
+ 
+const allWorkouts = useSelector(state => state.workouts)
+
+
+
+
 
     return (
         <div >
             <h2>Workouts</h2>
             <div className='container'>
               <ul id='workoutList'>
-                {workouts.map(n => 
+                {allWorkouts.map(n => 
                     <li key={n.id} className='workout'>
                     <h4>{n.title}</h4> 
                     <p>Focus: {n.focus}</p>
