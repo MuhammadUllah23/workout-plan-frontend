@@ -12,6 +12,10 @@ import WorkoutForm from './components/workout/WorkoutForm';
 import WorkoutList from './components/workout/WorkoutList'
 import WorkoutShow from './components/workout/WorkoutShow'
 import Home from './components/Home';
+import Login from './components/user/Login'
+import Signup from './components/user/Signup';
+import UserList from './components/user/UserList';
+import ShowUser from './components/user/ShowUser';
 
 function App() {
 
@@ -34,6 +38,10 @@ function App() {
             <Route path="/exercises" element={<ExerciseList  />}/>
             <Route path="/workout/:id/exercises/new" element={<ExerciseForm />}/>
             <Route path="/" element={<Home />} />
+            <Route path="/login" element={<Login/>} />
+            <Route path="/signup" element={<Signup/>} />
+            <Route path='/users' element={<UserList/>} />
+            <Route path='/user/:id' element={<ShowUser />}/>
       </Routes>
     </div>
   );
