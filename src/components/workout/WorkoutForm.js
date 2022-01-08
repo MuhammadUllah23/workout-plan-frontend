@@ -20,8 +20,10 @@
      }
 
      return (
-         <form className="form" onSubmit={handleSubmit}>
+         <div>
          <h2>Create Workout</h2>
+         <form className="form" onSubmit={handleSubmit}>
+         
             <input
             type="text"
             onChange={e => setWorkout({...workout, title: e.target.value})}
@@ -40,6 +42,6 @@
             <br />
             <input className="submitInput" type="submit" />
          </form>  
-         
+         </div>
      )
  }

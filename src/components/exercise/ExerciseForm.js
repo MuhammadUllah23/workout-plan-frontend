@@ -29,8 +29,10 @@ export default function ExerciseForm() {
     }
 
     return (
-        <form className="form" onSubmit={handleSubmit}>
+        <div>
         <h2>Create Exercise</h2>
+        <form className="form" onSubmit={handleSubmit}>
+        
            <input
            type="text"
            onChange={e => setExercise({...exercise, name: e.target.value})}
@@ -67,7 +69,7 @@ export default function ExerciseForm() {
             <br />        
            <input className="submitInput" type="submit" />
         </form>  
-        
+        </div>
     )
 
 }

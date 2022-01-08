@@ -18,6 +18,13 @@ export default function Signup() {
      }
     
     return (
-        <p>Signup</p>
+        <div>
+        <h2>Signup</h2>
+        <form onSubmit={handleSubmit}>
+
+        <label></label>
+
+        </form>
+        </div>
     )
 }
