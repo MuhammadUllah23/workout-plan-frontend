@@ -42,6 +42,27 @@ export default function Signup() {
         </input>
         <br />
 
+        <label>Password: </label>
+        <input 
+        type="password"
+        onChange={e => setUser({...user, password: e.target.value})}
+        name="password"
+        id="password"
+        value={user.password}>
+        </input>
+        <br />
+
+        <label>Confirm Password: </label>
+        <input 
+        type="password"
+        onChange={e => setUser({...user, password_confirmation: e.target.value})}
+        name="password_confirmation"
+        id="password_confirmation"
+        value={user.password_confirmation}>
+        </input>
+        <br />
+
+        <input className="submitInput" type="submit" />
         </form>
         </div>
     )
