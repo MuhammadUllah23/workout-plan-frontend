@@ -32,6 +32,16 @@ export default function Signup() {
         </input>
         <br />
 
+        <label>Email: </label>
+        <input 
+        type="email"
+        onChange={e => setUser({...user, email: e.target.value})}
+        name="email"
+        id="email"
+        value={user.email}>
+        </input>
+        <br />
+
         </form>
         </div>
     )
