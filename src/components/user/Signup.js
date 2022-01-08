@@ -10,6 +10,12 @@ export default function Signup() {
         password: "",
         password_confirmation: ""
     })
+
+    function handleSubmit(e){
+        e.preventDefault()
+        
+        console.log(user)
+     }
     
     return (
         <p>Signup</p>
