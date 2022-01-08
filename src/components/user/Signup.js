@@ -20,9 +20,17 @@ export default function Signup() {
     return (
         <div>
         <h2>Signup</h2>
-        <form onSubmit={handleSubmit}>
+        <form className="form" onSubmit={handleSubmit}>
 
-        <label></label>
+        <label>Username: </label>
+        <input 
+        type="text"
+        onChange={e => setUser({...user, username: e.target.value})}
+        name="username"
+        id="username"
+        value={user.username}>
+        </input>
+        <br />
 
         </form>
         </div>
