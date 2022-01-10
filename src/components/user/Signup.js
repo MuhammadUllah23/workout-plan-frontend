@@ -62,7 +62,7 @@ export default function Signup() {
         />
         <br />
 
-        <input className="submitInput" type="submit" />
+        <input className="submitInput" type="submit" value="Signup"/>
         </form>
         </div>
     )

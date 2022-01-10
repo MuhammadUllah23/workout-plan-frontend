@@ -13,6 +13,7 @@ export default function NavBar() {
         <li><NavLink to="/workouts/new" id='create'>Create Workout</NavLink></li>
         <li><NavLink to="/exercises" id='exercises'>Exercises</NavLink></li>
         <li><NavLink to="/signup" id='signup'>Signup</NavLink></li>
+        <li><NavLink to="/login" id='login'>Login</NavLink></li>
       </ul>
         
     </div>

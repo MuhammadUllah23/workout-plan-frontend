@@ -1,7 +1,19 @@
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
-export default function login({ onLogin }) {
-    const [user, setUser] = useState("");
+export default function Login() {
+    const [user, setUser] = useState({
+        email: "",
+        password: ""
+    })
+    const dispatch = useDispatch()
+    const navigate = useNavigate()
+
+    function handleSubmit(e) {
+        e.preventDefault();
+        // dispatch(loginUser({user}, navigate))
+    }
     return (
         <div>
             <h2>Login</h2>
@@ -27,7 +39,7 @@ export default function login({ onLogin }) {
             />
             <br />
 
-            <input className="submitInput" type="submit" />
+            <input className="submitInput" type="submit" value="Login"/>
             </form>
         </div>
     )
