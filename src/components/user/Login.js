@@ -1,4 +1,4 @@
-export default function login() {
+export default function login({ onLogin }) {
     return (
         <p>login</p>
     )
