@@ -11,10 +11,13 @@ export default function Signup() {
         password_confirmation: ""
     })
 
+    const dispatch = useDispatch()
+    const navigate = useNavigate()
+
     function handleSubmit(e){
         e.preventDefault()
-        
         console.log(user)
+        dispatch(createUser({user}, navigate))
      }
     
     return (
