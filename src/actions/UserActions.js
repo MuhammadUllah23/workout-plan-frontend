@@ -24,6 +24,22 @@ export function createUser(user, navigate) {
 
 export function loginUser(user, navigate) {
   return dispatch => {
-    
+    fetch("http://localhost:3000/api/v1/auth", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify(user),
+    })
+    .then((r) => r.json())
+    .then(data => {
+      if (data.message) {
+        alert(data.message)
+      } else{
+        localStorage.setItem('token', data.jwt)
+        navigate(`/user/${data.user.id}`)
+      }   
+    });
   }
 }
