@@ -21,3 +21,9 @@ export function createUser(user, navigate) {
   });
     }
 }
+
+export function loginUser(user, navigate) {
+  return dispatch => {
+    
+  }
+}
