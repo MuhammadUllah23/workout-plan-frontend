@@ -24,7 +24,7 @@ export function createUser(user, navigate) {
 
 export function loginUser(user, navigate) {
   return dispatch => {
-    fetch("http://localhost:3000/api/v1/auth", {
+    fetch("http://localhost:3000/api/v1/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -37,6 +37,7 @@ export function loginUser(user, navigate) {
       if (data.message) {
         alert(data.message)
       } else{
+       
         localStorage.setItem('token', data.jwt)
         navigate(`/user/${data.user.id}`)
       }   

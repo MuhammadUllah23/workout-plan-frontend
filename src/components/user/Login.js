@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { loginUser } from "../../actions/UserActions";
 
 export default function Login() {
     const [user, setUser] = useState({
-        email: "",
+        username: "",
         password: ""
     })
     const dispatch = useDispatch()
@@ -12,7 +13,7 @@ export default function Login() {
 
     function handleSubmit(e) {
         e.preventDefault();
-        // dispatch(loginUser({user}, navigate))
+        dispatch(loginUser({user}, navigate))
     }
     return (
         <div>
@@ -20,12 +21,12 @@ export default function Login() {
             <form className="form" onSubmit={handleSubmit}>
         
             <input 
-            type="email"
-            onChange={e => setUser({...user, email: e.target.value})}
-            name="email"
-            id="email"
-            value={user.email}
-            placeholder="Email"
+            type="text"
+            onChange={e => setUser({...user, username: e.target.value})}
+            name="username"
+            id="username"
+            value={user.username}
+            placeholder="username"
             />
             <br />
 
