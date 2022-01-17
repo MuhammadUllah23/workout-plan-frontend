@@ -11,9 +11,13 @@ export function createUser(user, navigate) {
   body: JSON.stringify(user),
 })
   .then((r) => r.json())
-  .then(user => {
-    console.log(user)
-    navigate(`/workouts`)   
+  .then(data => {
+    if (data.message) {
+      alert(data.message)
+  } else{
+    localStorage.setItem('token', data.jwt)
+    navigate(`/user/${data.user.id}`)
+  }   
   });
     }
 }
