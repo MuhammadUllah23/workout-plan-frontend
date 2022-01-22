@@ -1,7 +1,10 @@
 import { SET_USERS } from "./constants";
 
 export function fetchUsers(){
-  
+  return dispatch =>
+  fetch("http://localhost:3000/api/v1/users")
+  .then(r => r.json())
+  .then(users => dispatch({type: SET_USERS, payload: users}))
 }
 
 export function createUser(user, navigate) {
