@@ -1,4 +1,8 @@
-import { SIGNUP_USER } from "./constants";
+import { SET_USERS } from "./constants";
+
+export function fetchUsers(){
+  
+}
 
 export function createUser(user, navigate) {
     return dispatch =>{

@@ -6,6 +6,4 @@ export const SET_EXERCISES = "SET_EXERCISES"
 export const ADD_EXERCISE = "ADD_EXERCISE"
 export const DELETE_EXERCISE = "DELETE_EXERCISE"
 
-export const LOGIN_USER = "LOGIN_USER"
-export const SIGNUP_USER = "SIGNUP_USER"
 export const SET_USERS = "SET_USERS"
