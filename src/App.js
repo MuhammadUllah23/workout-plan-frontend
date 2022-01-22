@@ -5,6 +5,7 @@ import { useEffect } from "react";
 import { useDispatch } from 'react-redux';
 import { fetchWorkouts } from './actions/WorkoutActions';
 import { fetchExercises } from './actions/ExerciseActions';
+import { fetchUsers } from './actions/UserActions'; 
 
 import ExerciseForm from './components/exercise/ExerciseForm';
 import ExerciseList from './components/exercise/ExerciseList';
@@ -24,6 +25,7 @@ function App() {
   useEffect(() => {
       dispatch(fetchWorkouts())
       dispatch(fetchExercises())
+      dispatch(fetchUsers())
   }, [])
 
 
