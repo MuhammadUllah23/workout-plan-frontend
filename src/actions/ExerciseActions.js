@@ -30,6 +30,10 @@ export function createExercise(exercise, navigate){
     }
 }
 
+export function UPDATE_EXERCISE(workout, navigate){
+    
+}
+
 export function deleteExercise(exerciseId){
     return (dispatch) => {
         fetch(`http://localhost:3000/exercises/${exerciseId}`, {
