@@ -30,8 +30,27 @@ export function createExercise(exercise, navigate){
     }
 }
 
-export function UPDATE_EXERCISE(workout, navigate){
-    
+export function updateExercise(exercise, navigate){
+    return dispatch => {
+        fetch(`http://localhost:3000/exercises/${exercise.id}`, {
+            method: "PATCH",
+            headers: {
+                "Authorization": `Bearer <token>`,
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            },
+            body: JSON.stringify(exercise)
+        })
+        .then(r => r.json())
+        .then(exercise => {
+            if (exercise.message) {
+                alert(exercise.message)
+            } else{
+                dispatch({type: UPDATE_EXERCISE, payload: exercise})
+                navigate(`/workout/${exercise.workout.id}`)
+            }
+        })
+    }
 }
 
 export function deleteExercise(exerciseId){
