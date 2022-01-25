@@ -1,4 +1,4 @@
-import { SET_WORKOUT, ADD_WORKOUT, DELETE_WORKOUT } from "./constants"
+import { SET_WORKOUT, ADD_WORKOUT, DELETE_WORKOUT, UPDATE_WORKOUT } from "./constants"
 
 export function fetchWorkouts(){
     return dispatch =>{
