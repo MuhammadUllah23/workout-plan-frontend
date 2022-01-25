@@ -36,6 +36,10 @@ export function createWorkout(workout, navigate){
     
 }
 
+export function updateWorkout(workout, navigate){
+    
+}
+
 export function deleteWorkout(workoutId, navigate){
     return (dispatch) => {
         fetch(`http://localhost:3000/workouts/${workoutId}`, {
