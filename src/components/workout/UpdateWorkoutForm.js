@@ -12,7 +12,7 @@ export default function UpdateWorkoutForm() {
     const [workout, setWorkout] = useState({
         title: "",
         focus: "",
-        id: ""
+        id: id
     })
 
     const navigate = useNavigate()
