@@ -37,7 +37,26 @@ export function createWorkout(workout, navigate){
 }
 
 export function updateWorkout(workout, navigate){
-    
+    return dispatch => {
+        fetch(`http://localhost:3000/workouts/${workout.id}`, {
+            method: "PATCH",
+            headers: {
+                "Authorization": `Bearer <token>`,
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            },
+            body: JSON.stringify(workout)
+        })
+        .then(r => r.json())
+        .then(workout => {
+            if (workout.message) {
+                alert(workout.message)
+            } else{
+                dispatch({type: UPDATE_WORKOUT, payload: workout})
+                navigate(`/workout/${workout.id}`)
+            }
+        })
+    }
 }
 
 export function deleteWorkout(workoutId, navigate){
