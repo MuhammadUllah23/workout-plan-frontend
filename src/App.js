@@ -6,7 +6,7 @@ import { useDispatch } from 'react-redux';
 import { fetchWorkouts, updateWorkout } from './actions/WorkoutActions';
 import { fetchExercises } from './actions/ExerciseActions';
 import { fetchUsers } from './actions/UserActions'; 
-
+import UpdateExerciseForm from './components/exercise/UpdateExerciseForm';
 import ExerciseForm from './components/exercise/ExerciseForm';
 import ExerciseList from './components/exercise/ExerciseList';
 import WorkoutForm from './components/workout/WorkoutForm';
@@ -41,6 +41,7 @@ function App() {
             <Route path="/workout/:id/edit" element={<UpdateWorkoutForm />} />
             <Route path="/exercises" element={<ExerciseList  />}/>
             <Route path="/workout/:id/exercises/new" element={<ExerciseForm />}/>
+            <Route path="/workout/:id/exercises/:id/edit" element={<UpdateExerciseForm />}/>
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login/>} />
             <Route path="/signup" element={<Signup/>} />
